@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.TransparentStatusBar" parent="Theme.Av">
+        <item name="android:windowTranslucentStatus">true</item> <!-- 4.4+兼容 -->
+        <item name="android:statusBarColor">@android:color/transparent</item> <!-- 5.0+ -->
+        <item name="android:windowLightStatusBar">true</item> <!-- 状态栏图标深色 -->
+    </style>
+</resources>

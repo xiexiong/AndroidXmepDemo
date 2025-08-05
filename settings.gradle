@@ -1,0 +1,45 @@
+pluginManagement {
+    repositories {
+        maven {
+            url = uri("http://nexus.test.sharexm.cn/repository/xmai/")
+            setAllowInsecureProtocol(true)
+            credentials {
+                username = "xmai"                    // 账号
+                password = "C9beGFAFOxNnQQIo"         // 密码
+            }
+        }
+        maven {
+            url = 'http://download.flutter.io'        //flutter依赖
+            allowInsecureProtocol = true
+        }
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven {
+            url = uri("http://nexus.test.sharexm.cn/repository/xmai/")
+            setAllowInsecureProtocol(true)
+            credentials {
+                username = "xmai"                    // 账号
+                password = "C9beGFAFOxNnQQIo"         // 密码
+            }
+        }
+        maven {
+            url = 'http://download.flutter.io'        //flutter依赖
+            allowInsecureProtocol = true
+        }
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+rootProject.name = "xmepModule"
+include ':app'
