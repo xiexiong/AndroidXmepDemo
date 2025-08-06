@@ -62,7 +62,7 @@ dependencies {
     implementation 'io.flutter:x86_64_release:1.0.0-' + engineVersion
     //情感伴侣
     implementation 'com.yofo.xmai:nuisdk:1.0.1'
-    implementation 'com.yofo.xmai:xmepRelease:1.0.8'
+    implementation 'com.yofo.xmai:xmepRelease:1.1.9'
     implementation 'com.yofo.xmai:aliyun_av_plugin:1.0.2'
     implementation 'com.yofo.xmai:audioplayers:1.0.1'
     implementation 'com.yofo.xmai:connectivity:1.0.1'

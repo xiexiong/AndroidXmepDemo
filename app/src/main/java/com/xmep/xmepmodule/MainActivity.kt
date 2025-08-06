@@ -1,26 +1,34 @@
 package com.xmep.xmepmodule
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.xmep.xmepmodule.ui.theme.XmepModuleTheme
+import io.flutter.plugin.common.MethodChannel
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main_layout)
+
         findViewById<Button>(R.id.btn_ai).setOnClickListener {
-            PartnerFlutterActivity.startActivity(this)
+            val intent = Intent(this, FlutterCommActivity::class.java).apply {
+                putExtra("source", "openAI")
+            }
+            startActivity(intent)
         }
+
+        findViewById<Button>(R.id.btn_ai001).setOnClickListener {
+            val intent = Intent(this, FlutterCommActivity::class.java).apply {
+                putExtra("source", "openAICS")
+            }
+            startActivity(intent)
+        }
+
+
+
     }
+
 }
 
