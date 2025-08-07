@@ -70,54 +70,15 @@ android.useAndroidX=true
 6、	实现跳转Flutter页面，参考（PartnerFlutterActivity）
 
 
-    import android.app.Activity
-    import io.flutter.embedding.android.FlutterActivity
-    import io.flutter.embedding.engine.FlutterEngine
-    import io.flutter.plugin.common.MethodChannel
-    import io.flutter.plugins.GeneratedPluginRegistrant
-    
-    
-    /**
-     * 自定义情感伴侣页面
-     */
-    class PartnerFlutterActivity : FlutterActivity() {
-    
-    
-    
-        companion object {
-            //Channel名称
-            private const val CHANNEL_NAME = "com.sharexm.flutter/native"
-            /**
-             * 打开Flutter页面
-             */
-            fun startActivity(activity: MainActivity) {
-                activity.startActivity(
-                    NewEngineIntentBuilder(PartnerFlutterActivity::class.java).build(activity)
-                )
-            }
-        }
-    
-        override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
-            GeneratedPluginRegistrant.registerWith(flutterEngine)
-            val channel = MethodChannel(flutterEngine.dartExecutor, CHANNEL_NAME)
-            channel.setMethodCallHandler { call, result ->
-                if (call.method == "backToNative") {
-                    //关闭Flutter当前页面，返回到首页
-                    finish()
-                    result.success(null)
-                } else {
-                    result.notImplemented()
-                }
-            }
-            //透传登录参数
-            val map = HashMap<String, Any?>()
-            map["openUserId"] = "userid0001"
-            map["openToken"] = "you are usertoken"
-            map["baseUrl"] = "ApiUtils.getApiService()"
-            channel.invokeMethod("openXmAi", map)
-        }
-    
-    }
+    PS：必须务必保持FlutterEngine在项目的唯一性。
+    实现步骤如下：
+    1、	创建FlutterCommHelper工具类。
+    2、	在application中初始化FlutterEngine
+    3、	创建FlutterActivity，禁用自动引擎创建，使用application中创建的缓存。
+    4、	跳转情感伴侣methodName = openXmAi
+    5、	跳转AI智能客服methodName = openXmAiCs
+    6、	请保持invokeMethod Map参数的准确性。
+
 
 
 
