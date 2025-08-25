@@ -62,7 +62,7 @@ dependencies {
     implementation 'io.flutter:x86_64_release:1.0.0-' + engineVersion
     //情感伴侣
     implementation 'com.yofo.xmai:nuisdk:1.0.1'
-    implementation 'com.yofo.xmai:xmepRelease:1.1.9'
+    implementation 'com.yofo.xmai:xmepRelease:1.2.0'
     implementation 'com.yofo.xmai:aliyun_av_plugin:1.0.2'
     implementation 'com.yofo.xmai:audioplayers:1.0.1'
     implementation 'com.yofo.xmai:connectivity:1.0.1'
@@ -76,6 +76,8 @@ dependencies {
     implementation 'com.yofo.xmai:webview_flutter:1.0.1'
     implementation 'com.yofo.xmai:permission_handler:1.0.1'
     implementation 'com.yofo.xmai:sqflite:1.0.1'
+    implementation 'com.yofo.xmai:pdfview:1.0.1'
+    implementation 'com.yofo.xmai:video_player:1.0.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
 
 }
