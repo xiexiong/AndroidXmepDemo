@@ -8,6 +8,8 @@ android {
     namespace 'com.xmep.xmepmodule'
     compileSdk 35
 
+    ndkVersion = "27.0.12077973"
+
     defaultConfig {
         applicationId "com.xmep.xmepmodule"
         minSdk 21
@@ -15,7 +17,9 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+        }
     }
 
     buildTypes {
@@ -53,31 +57,7 @@ dependencies {
     androidTestImplementation libs.androidx.ui.test.junit4
     debugImplementation libs.androidx.ui.tooling
     debugImplementation libs.androidx.ui.test.manifest
-    //引擎版本
-    def engineVersion = 'cf56914b326edb0ccb123ffdc60f00060bd513fa'
-    //flutter 插件依赖
-    implementation 'io.flutter:flutter_embedding_release:1.0.0-' + engineVersion
-    implementation 'io.flutter:armeabi_v7a_release:1.0.0-' + engineVersion
-    implementation 'io.flutter:arm64_v8a_release:1.0.0-' + engineVersion
-    implementation 'io.flutter:x86_64_release:1.0.0-' + engineVersion
-    //情感伴侣
-    implementation 'com.yofo.xmai:nuisdk:1.0.1'
-    implementation 'com.yofo.xmai:xmepRelease:1.2.1'
-    implementation 'com.yofo.xmai:aliyun_av_plugin:1.0.2'
-    implementation 'com.yofo.xmai:audioplayers:1.0.1'
-    implementation 'com.yofo.xmai:connectivity:1.0.1'
-    implementation 'com.yofo.xmai:device_info_plus:1.0.1'
-    implementation 'com.yofo.xmai:package_info_plus:1.0.1'
-    implementation 'com.yofo.xmai:flutter_aliyun_nui:1.0.1'
-    implementation 'com.yofo.xmai:xmcs:1.0.1'
-    implementation 'com.yofo.xmai:path_provider:1.0.1'
-    implementation 'com.yofo.xmai:shared_preferences:1.0.1'
-    implementation 'com.yofo.xmai:url_launcher:1.0.1'
-    implementation 'com.yofo.xmai:webview_flutter:1.0.1'
-    implementation 'com.yofo.xmai:permission_handler:1.0.1'
-    implementation 'com.yofo.xmai:sqflite:1.0.1'
-    implementation 'com.yofo.xmai:pdfview:1.0.1'
-    implementation 'com.yofo.xmai:video_player:1.0.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+
+    implementation project(':xmailibrary')
 
 }

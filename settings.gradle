@@ -43,3 +43,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "xmepModule"
 include ':app'
+include ':xmailibrary'
