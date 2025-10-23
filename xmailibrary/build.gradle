@@ -60,7 +60,7 @@ dependencies {
     implementation 'com.yofo.xmai:video_player:1.0.1'
     implementation 'com.yofo.xmai:image_gallery_saver_plus_release:1.0.1'
 //    常用依赖
-    implementation 'com.yofo.xmai:xmcs_module:1.0.2'
+    implementation 'com.yofo.xmai:xmcs_module:1.0.3'
     implementation 'com.yofo.xmai:xmcs:1.1.5'
     implementation 'com.yofo.xmai:aliyun_av_plugin:1.0.4'
     implementation 'com.yofo.xmai:flutter_aliyun_nui:1.0.3'
