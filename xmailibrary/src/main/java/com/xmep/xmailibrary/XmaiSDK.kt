@@ -6,6 +6,7 @@ import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.dart.DartExecutor
 import io.flutter.plugin.common.MethodChannel
+import io.flutter.plugins.webviewflutter.WebViewFlutterPlugin
 
 object XmaiSDK {
 
@@ -22,8 +23,11 @@ object XmaiSDK {
                 DartExecutor.DartEntrypoint.createDefault()
             )
         }
-        FlutterEngineCache.getInstance().put(FLUTTER_ENGINE_ID, flutterEngine)
 
+        // 手动注册webview插件到flutter引擎
+        flutterEngine.getPlugins().add(WebViewFlutterPlugin())
+
+        FlutterEngineCache.getInstance().put(FLUTTER_ENGINE_ID, flutterEngine)
         // 启动FlutterActivity
         context.startActivity(
             FlutterActivity.withCachedEngine(FLUTTER_ENGINE_ID)
@@ -52,7 +56,7 @@ object XmaiSDK {
         val arguments = when (name) {
             "xmcs" -> mapOf(
                 "openToken" to "sdds2sdfd",
-                "appKey" to "GAB3gEPLZNJB6__-mnMtUt==",
+                "appKey" to "GAB3gDFLZNJB6__-mnMtUt==",
                 "serviceId" to "sasad2q323wsddsdsdsddssdsddsds"
             )
             else -> mapOf(

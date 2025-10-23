@@ -12,6 +12,7 @@ pluginManagement {
             url = 'http://download.flutter.io'        //flutter依赖
             allowInsecureProtocol = true
         }
+
         google()
         mavenCentral()
         gradlePluginPortal()
@@ -32,6 +33,7 @@ dependencyResolutionManagement {
             url = 'http://download.flutter.io'        //flutter依赖
             allowInsecureProtocol = true
         }
+
         google()
         mavenCentral()
         gradlePluginPortal()
