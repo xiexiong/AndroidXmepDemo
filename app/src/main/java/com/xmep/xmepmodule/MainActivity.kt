@@ -21,6 +21,10 @@ class MainActivity : ComponentActivity(), XmAiCallback {
         findViewById<Button>(R.id.btn_ai001).setOnClickListener {
             XmaiSDK.openModule(this,"xmcs",this)
         }
+
+        findViewById<Button>(R.id.btn_ai002).setOnClickListener {
+            XmaiSDK.openModule(this,"xmca",this)
+        }
     }
 
     override fun onBackToNative() {

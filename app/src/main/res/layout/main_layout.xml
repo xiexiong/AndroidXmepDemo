@@ -18,4 +18,11 @@
         android:text="ai智能客服"
         android:layout_marginTop="50dp"/>
 
+    <Button
+        android:id="@+id/btn_ai002"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="ai小助手"
+        android:layout_marginTop="50dp"/>
+
 </LinearLayout>

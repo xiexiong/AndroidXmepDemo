@@ -59,6 +59,14 @@ object XmaiSDK {
                 "appKey" to "GAB3gDFLZNJB6__-mnMtUt==",
                 "serviceId" to "sasad2q323wsddsdsdsddssdsddsds"
             )
+            "xmca" -> mapOf(
+                "openToken" to "sds",
+                "appKey" to "GrA3gEpJZNJB7__-mnMtUg==",
+                "companyId" to "1",
+                "communityTopId" to "1",
+                "communityId" to "1",
+                "baseUrl" to "sss"
+            )
             else -> mapOf(
                 "openToken" to "382dba57cd528d901026b9b0dc674a656aa0dab4867763f35dff4b17d45264d6cb6bfb9a932b7ea30625796d8bfac7ae3ee18470aeee3734753032cf47f2fd8b16a95653802c1212e2d20764493c0af7cea06c7cf3b58e98bb489ef05fd9baf30ed933dfc291073da7f8c62f13b144737c4625398b0c0bcbce48259c32f56863bb625fcf32098a188a394f41a5a86100",
                 "openUserId" to "00059ee89296f8759fc0756aa8b5bbc4",

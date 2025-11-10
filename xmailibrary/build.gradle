@@ -59,10 +59,12 @@ dependencies {
     implementation 'com.yofo.xmai:pdfview:1.0.1'
     implementation 'com.yofo.xmai:video_player:1.0.1'
     implementation 'com.yofo.xmai:image_gallery_saver_plus_release:1.0.1'
-//    常用依赖
-    implementation 'com.yofo.xmai:xmcs_module:1.0.5'
-    implementation 'com.yofo.xmai:xmcs:1.1.5'
     implementation 'com.yofo.xmai:aliyun_av_plugin:1.0.4'
     implementation 'com.yofo.xmai:flutter_aliyun_nui:1.0.3'
+//    常用依赖
+    implementation 'com.yofo.xmai:video_thumbnail:1.0.0' //新增依赖
+    implementation 'com.yofo.xmai:wakelock_plus:1.0.0' //新增依赖
+    implementation 'com.yofo.xmai:xmcs_module:1.0.6' //版本修改
+    implementation 'com.yofo.xmai:xmcs:1.1.7' //版本修改
 
 }
