@@ -12,9 +12,8 @@ object XmaiSDK {
 
     const val CHANNEL_NAME = "com.sharexm.flutter/native"
     const val FLUTTER_ENGINE_ID = "flutter_engine"
-    fun openModule(context : Activity,name: String,callback: XmAiCallback) {
-        val method = "openXmAi"
-        val initialRoute ="/${name}"
+    fun openModule(context : Activity, name: String, route: String, callback: XmAiCallback) {
+        val initialRoute ="/${route}"
 
         // 创建FlutterEngine
         val flutterEngine = FlutterEngine(context).apply {
@@ -53,7 +52,7 @@ object XmaiSDK {
 
         // 发送参数到Flutter
 
-        val arguments = when (name) {
+        val arguments = when (route) {
             "xmcs" -> mapOf(
                 "openToken" to "sdds2sdfd",
                 "appKey" to "GAB3gDFLZNJB6__-mnMtUt==",
@@ -75,6 +74,6 @@ object XmaiSDK {
         }
 
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL_NAME)
-            .invokeMethod(method, arguments)
+            .invokeMethod(name, arguments)
     }
 }

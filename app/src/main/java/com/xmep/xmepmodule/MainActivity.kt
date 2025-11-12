@@ -15,15 +15,15 @@ class MainActivity : ComponentActivity(), XmAiCallback {
         setContentView(R.layout.main_layout)
 
         findViewById<Button>(R.id.btn_ai).setOnClickListener {
-            XmaiSDK.openModule(this,"xmep",this)
+            XmaiSDK.openModule(this,"openXmai","xmep",this)
         }
 
         findViewById<Button>(R.id.btn_ai001).setOnClickListener {
-            XmaiSDK.openModule(this,"xmcs",this)
+            XmaiSDK.openModule(this,"openXmcs","xmcs",this)
         }
 
         findViewById<Button>(R.id.btn_ai002).setOnClickListener {
-            XmaiSDK.openModule(this,"xmca",this)
+            XmaiSDK.openModule(this,"openXmca","xmca",this)
         }
     }
 
