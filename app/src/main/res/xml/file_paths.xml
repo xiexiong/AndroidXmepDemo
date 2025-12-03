@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 允许通过 FileProvider 访问 cache 与 files 下的任意文件 -->
+    <cache-path name="cache" path="." />
+    <files-path name="files" path="." />
+    <!-- 如需访问外部存储可添加 external-path / external-files-path -->
+</paths>
