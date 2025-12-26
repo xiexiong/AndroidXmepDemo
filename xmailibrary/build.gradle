@@ -67,8 +67,8 @@ dependencies {
     implementation 'com.yofo.xmai:video_thumbnail:1.0.0' //新增依赖
 //    implementation 'com.yofo.xmai:wakelock_plus:1.0.0' //新增依赖
     //正式环境
-    implementation 'com.yofo.xmai:xmcs_module:1.0.9' //版本修改
-    implementation 'com.yofo.xmai:xmcs:1.2.0' //版本修改
+    implementation 'com.yofo.xmai:xmcs_module:1.2.4' //版本修改
+    implementation 'com.yofo.xmai:xmcs:1.2.4' //版本修改
 
 
 }
