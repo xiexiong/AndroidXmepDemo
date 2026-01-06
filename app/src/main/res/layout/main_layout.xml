@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="情感伴侣"
-        android:layout_marginTop="200dp"/>
+        android:layout_marginTop="100dp"/>
 
     <Button
         android:id="@+id/btn_ai001"
@@ -23,6 +23,13 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="ai小助手"
+        android:layout_marginTop="50dp"/>
+
+    <Button
+        android:id="@+id/btn_ai003"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="AI数字人"
         android:layout_marginTop="50dp"/>
 
 </LinearLayout>

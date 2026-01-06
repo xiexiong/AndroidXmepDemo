@@ -25,6 +25,9 @@ class MainActivity : ComponentActivity(), XmAiCallback {
         findViewById<Button>(R.id.btn_ai002).setOnClickListener {
             XmaiSDK.openModule(this,"openXmca","xmca",this)
         }
+        findViewById<Button>(R.id.btn_ai003).setOnClickListener {
+            XmaiSDK.openModule(this,"openXmdh","xmdh",this)
+        }
     }
 
     override fun onBackToNative() {
@@ -36,3 +39,27 @@ class MainActivity : ComponentActivity(), XmAiCallback {
     }
 
 }
+
+
+//engine.run 增加入口配置(Entrypoint)参数,值固定为xmNativeMain
+//🌰 engine.run(withEntrypoint: "xmNativeMain", initialRoute: initRoute)
+//
+//FlutterMethod 变化:
+//HumanCustomerService -> humanCustomerService (更新,头字母H->h)
+//xmcaReferenceDetail 社群助手关联资料详情跳转(新增) 返回参数跟 @肖友强 对接
+//xmdhShareVideo 数字人分享视频链接 (新增) 返回参数跟 @谢雄  对接
+//
+//openFlutterPage args
+//类型由原来的[String, String] -> [String, Any]
+//内容结构由原来的{}改为{"appParams":"","appStyle":""}
+//🌰
+//let appParams = [
+//// 公共参数
+//"openToken": "sdds2sdfd", // 享脉的code
+//"appKey": "GAB3gDFLZNJB6__-mnMtUt==", // 分配的appkey
+//"baseUrl": "sss", // 享脉对应环境的后端API baseUrl
+//// 业务参数
+//"serviceId": "e113589d-7be9-45a8-894d-84d3cfb6f87b", //客服ID
+//]
+//let appStyle = ["textScaler": "1", "iconScaler": "1", "titleScaler": "1"]
+//let args = ["appParams": appParams, "appStyle": appStyle]

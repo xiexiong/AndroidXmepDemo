@@ -1,10 +1,12 @@
 package com.xmep.xmailibrary
 
 import android.app.Activity
+import io.flutter.FlutterInjector
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.dart.DartExecutor
+import io.flutter.embedding.engine.loader.FlutterLoader
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugins.webviewflutter.WebViewFlutterPlugin
 
@@ -19,7 +21,10 @@ object XmaiSDK {
         val flutterEngine = FlutterEngine(context).apply {
             navigationChannel.setInitialRoute(initialRoute)
             dartExecutor.executeDartEntrypoint(
-                DartExecutor.DartEntrypoint.createDefault()
+//                DartExecutor.DartEntrypoint.createDefault()
+                DartExecutor.DartEntrypoint(
+                    FlutterInjector.instance().flutterLoader().findAppBundlePath(),"xmNativeMain"
+                )
             )
         }
 
@@ -42,7 +47,7 @@ object XmaiSDK {
                     result.success(null)
                     context.finish()
                 }
-                "HumanCustomerService" -> {
+                "humanCustomerService" -> {
                     callback.onHumanCustomerService()
                     FlutterEngineCache.getInstance().remove(FLUTTER_ENGINE_ID)
                 }
@@ -73,6 +78,19 @@ object XmaiSDK {
                     "communityTopId" to "1",
                     "communityId" to "1",
                     "baseUrl" to "sss"
+                ),
+                "appStyle" to mapOf(
+                    "textScaler" to "1",
+                    "iconScaler" to "1",
+                    "titleScaler" to "1"
+                )
+            )
+            "xmdh" -> mapOf(
+                "appParams" to mapOf(
+                    "openToken" to "xiong",
+                    "appKey" to "GrA91gEpJZNJB6__-mnMtUg==",
+                    "companyId" to "1",
+                    "baseUrl" to "http://baidu.com"
                 ),
                 "appStyle" to mapOf(
                     "textScaler" to "1",
