@@ -1,6 +1,7 @@
 package com.xmep.xmailibrary
 
 import android.app.Activity
+import com.example.xm_video_player.XmVideoPlayerViewFactory
 import io.flutter.FlutterInjector
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
@@ -8,6 +9,10 @@ import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.dart.DartExecutor
 import io.flutter.embedding.engine.loader.FlutterLoader
 import io.flutter.plugin.common.MethodChannel
+import io.flutter.plugins.GeneratedPluginRegistrant
+import io.flutter.plugins.videoplayer.Messages
+import io.flutter.plugins.videoplayer.Messages.AndroidVideoPlayerApi
+import io.flutter.plugins.videoplayer.VideoPlayerPlugin
 import io.flutter.plugins.webviewflutter.WebViewFlutterPlugin
 
 object XmaiSDK {
@@ -27,6 +32,13 @@ object XmaiSDK {
                 )
             )
         }
+        flutterEngine
+            .platformViewsController
+            .registry
+            .registerViewFactory(
+                "xm_video_player/video_player",
+                XmVideoPlayerViewFactory(flutterEngine.dartExecutor.binaryMessenger)
+            )
 
         // 手动注册webview插件到flutter引擎
         flutterEngine.getPlugins().add(WebViewFlutterPlugin())

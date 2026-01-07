@@ -62,22 +62,19 @@ dependencies {
     implementation 'com.yofo.xmai:aliyun_av_plugin:1.0.4'
     implementation 'com.yofo.xmai:flutter_aliyun_nui:1.0.3'
     implementation 'com.google.android.material:material:1.9.0'
-
-//    常用依赖
-    implementation 'com.yofo.xmai:video_thumbnail:1.0.0' //新增依赖
+    implementation 'com.yofo.xmai:video_thumbnail:1.0.0'
     //新增依赖
-    implementation "androidx.exifinterface:exifinterface:1.3.6"
-    implementation 'com.yofo.xmai:wakelock_plus:1.0.0'
+    implementation 'androidx.media3:media3-exoplayer:1.2.0'
     implementation 'com.yofo.xmai:audio_session:1.0.0'
     implementation 'com.yofo.xmai:flutter_plugin_lifecycle:1.0.0'
     implementation 'com.yofo.xmai:image_picker_release:1.0.0'
     implementation 'com.yofo.xmai:just_audio_release:1.0.0'
     implementation 'com.yofo.xmai:record_android_release:1.0.0'
-    implementation 'com.yofo.xmai:xm_video_player:1.0.0'
+    implementation 'com.yofo.xmai:xm_video_player:1.0.1'
     implementation 'com.yofo.xmai:xmvx_interface_plugin_release:1.0.0'
     //正式环境
-    implementation 'com.yofo.xmai:xmcs_module:1.2.5' //版本修改
-    implementation 'com.yofo.xmai:xmcs:1.2.5' //版本修改
+    implementation 'com.yofo.xmai:xmcs_module:1.2.6' //版本修改
+    implementation 'com.yofo.xmai:xmcs:1.2.6' //版本修改
 
 
 }
